@@ -5,7 +5,7 @@
   # Fields:
   # color, title (=text), text, url
 
-  is_remote = locals[:url].match(/^(http:|https:)?\/\//)
+  is_remote = locals[:url]&.match(/^(http:|https:)?\/\//)
 
   url = if is_remote
     locals[:url]
